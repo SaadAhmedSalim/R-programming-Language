@@ -47,3 +47,25 @@ greeting <- "Hello"
 name <-"Mr.White"
 message <- paste(greeting, name)
 message
+
+
+#logical Explanation
+
+4<5
+10>100
+4==5
+
+result <- 4 > 5
+result
+typeof(result)
+
+result2 <- !TRUE
+result2
+
+result3 <- !(4>1)
+result3
+
+result | result3
+result & result3
+
+isTRUE(result)
