@@ -45,3 +45,25 @@ t(FieldGoals/Games)
 
 matplot(t(FieldGoals/FieldGoalAttempts),type="b", pach=15:18, col=c(1:4,6))
 legend("bottomleft", inset=0.01, legend=Players,pach=15:18, col=c(1:4,6), horiz=F)
+
+#-----------------------------
+
+Games
+Games[1:3, 6:10]
+Games[c(1,10),]
+Games[, c("2008","2009")]
+Games[1,]
+
+is.matrix(Games[1,])
+is.vector(Games[1,])
+Games[1,,drop=F]
+Games[1,5,drop=F]
+
+#-----------------------------
+
+Data <- MinutesPlayed[1:3,]
+Data <- MinutesPlayed[1,,drop=F]
+
+matplot(t(Data),type="b", pach=15:18, col=c(1:4,6))
+legend("bottomleft", inset=0.01, legend=Players[1:3],pach=15:18, col=c(1:4,6), horiz=F)
+Data
