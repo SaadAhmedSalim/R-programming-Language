@@ -22,7 +22,7 @@ tem.vec
 
 Bravo <- matrix(tem.vec, 3,3)
 Bravo
-
+Bravo[1,2]
 rownames(Bravo) <- c("1","2","3")
 Bravo
 
@@ -32,6 +32,14 @@ Bravo
 Bravo["2","Y"] <- 0
 Bravo
 
+#---Excercise
+
+v1 <- c(1,22,33)
+v2 <- c("Hi","there","friend")
+v3 <- c(11,3,2017)
+D <- rbind(v1,v2,v3)
+D
+D[3,2]
 #------------Matrix Operation
 
 ?matplot
@@ -89,6 +97,14 @@ myplot <- function(data, rows){
 myplot(Salary, 1:10)
 myplot(Salary)
 myplot(MinutesPlayed/Games,3)
+
+#Excercise
+
+f <- function(vector=1:3){
+  vector * 5
+}
+f()
+f() + f(c(1,1,1))
 
 #------------------
 
