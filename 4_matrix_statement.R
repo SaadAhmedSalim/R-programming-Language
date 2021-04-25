@@ -67,3 +67,53 @@ Data <- MinutesPlayed[1,,drop=F]
 matplot(t(Data),type="b", pach=15:18, col=c(1:4,6))
 legend("bottomleft", inset=0.01, legend=Players[1:3],pach=15:18, col=c(1:4,6), horiz=F)
 Data
+
+#----------------------
+
+myplot <- function(){
+  Data <- MinutesPlayed[2:3,,drop=F]
+  
+  matplot(t(Data),type="b", pach=15:18, col=c(1:4,6))
+  legend("bottomleft", inset=0.01, legend=Players[2:3],pach=15:18, col=c(1:4,6), horiz=F)
+}
+myplot()
+myplot(1:10)
+
+
+myplot <- function(data, rows){
+  Data <- data[rows,,drop=F]
+  
+  matplot(t(Data),type="b", pach=15:18, col=c(1:4,6))
+  legend("bottomleft", inset=0.01, legend=Players[rows],pach=15:18, col=c(1:4,6), horiz=F)
+}
+myplot(Salary, 1:10)
+myplot(Salary)
+myplot(MinutesPlayed/Games,3)
+
+#------------------
+
+# Salary
+myplot(Salary)
+myplot(Salary/Games)
+myplot(Salary/FieldGoals)
+
+#In-Game Matrics
+myplot(MinutePlayed)
+myplot(Points)
+
+#in-game normalised matrics
+
+myplot(FieldGoals/Games)
+myplot(FieldGoals/FieldGoalAttempts)
+myplot(FieldGoalAttempts/Games)
+myplot(Points/Games)
+
+#interesting observation
+myplot(MinutesPlayed/Games)
+myplot(Games)
+
+#time is valuable
+myplot(FieldGoals/MinutesPlayed)
+
+#Player Style
+myplot(Points/FieldGoals)
